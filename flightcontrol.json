@@ -5,32 +5,22 @@
       "id": "production",
       "name": "Production",
       "region": "us-east-1",
+      "source": {
+        "branch": "main"
+      },
       "services": [
         {
           "id": "api",
           "name": "API",
-          "type": "fargate",
+          "type": "web",
           "buildType": "docker",
           "dockerfilePath": "./demo-server/Dockerfile",
           "cpu": 0.5,
           "memory": 1,
           "minInstances": 1,
           "maxInstances": 1,
-          "port": 3001,
-          "envVariables": {
-            "DATABASE_URL": {
-              "type": "secret"
-            },
-            "LLM_API_KEY": {
-              "type": "secret"
-            },
-            "WEBHOOK_SECRET": {
-              "type": "secret"
-            }
-          },
-          "healthCheck": {
-            "path": "/api/health"
-          }
+          "port": 3001,      
+          "healthCheckPath": "/api/health"          
         },
         {
           "id": "frontend",
