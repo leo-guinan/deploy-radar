@@ -22,7 +22,15 @@
           "minInstances": 1,
           "maxInstances": 1,
           "port": 3001,      
-          "healthCheckPath": "/api/health"          
+          "healthCheckPath": "/api/health",
+          "customDomains": [
+            {
+              "hostname": "your-api-domain.com",
+              "certificate": {
+                "type": "acm"
+              }
+            }
+          ]
         },
         {
           "id": "frontend",
@@ -32,7 +40,18 @@
           "basePath": ".",
           "installCommand": "git submodule update --init --recursive && cd radar-frontend && npm install",
           "buildCommand": "cd radar-frontend && npm run build",
-          "outputDirectory": "radar-frontend/dist"
+          "outputDirectory": "radar-frontend/dist",
+          "envVariables": {
+            "VITE_API_URL": "https://your-api-domain.com"
+          },
+          "customDomains": [
+            {
+              "hostname": "your-frontend-domain.com",
+              "certificate": {
+                "type": "acm"
+              }
+            }
+          ]
         },
         {
           "id": "db",
