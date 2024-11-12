@@ -1,14 +1,4 @@
 [phases.setup]
 nixPkgs = ['...', 'python', 'nodejs']
 
-[phases.install]
-onlyIncludeFiles = [
-  "radar-frontend/.npmrc",
-  "radar-frontend/package.json",
-  "radar-frontend/package-lock.json",
-  "radar-frontend/patches/",
-  "build_frontend.sh",
-  "build_backend.sh",
-  "radar-backend/pyproject.toml",
-  "radar-backend/poetry.lock",  
-]
+
