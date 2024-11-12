@@ -1,5 +1,4 @@
-[phases.setup]
-nixPkgs = ['...', 'python', 'nodejs']
+providers = ["...", "python", "nodejs"]
 
 [phases.setup]
 nixPkgs = ['...', 'git', 'openssl', 'openssh']
