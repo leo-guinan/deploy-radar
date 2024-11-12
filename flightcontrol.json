@@ -40,18 +40,7 @@
           "basePath": ".",
           "installCommand": "git submodule update --init --recursive && cd radar-frontend && npm install",
           "buildCommand": "cd radar-frontend && npm run build",
-          "outputDirectory": "radar-frontend/dist",
-          "envVariables": {
-            "VITE_API_URL": "https://your-api-domain.com"
-          },
-          "customDomains": [
-            {
-              "hostname": "your-frontend-domain.com",
-              "certificate": {
-                "type": "acm"
-              }
-            }
-          ]
+          "outputDirectory": "radar-frontend/dist"          
         },
         {
           "id": "db",
