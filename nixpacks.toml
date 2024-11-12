@@ -1,3 +1,14 @@
 [phases.setup]
 nixPkgs = ['...', 'python', 'nodejs']
 
+[phases.install]
+onlyIncludeFiles = [
+  ".npmrc",
+  "package.json",
+  "package-lock.json",
+  "./patches/",
+  "build_frontend.sh",
+  "build_backend.sh",
+  "pyproject.toml",
+  "poetry.lock",  
+]
