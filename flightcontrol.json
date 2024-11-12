@@ -14,6 +14,7 @@
           "name": "API",
           "type": "web",
           "buildType": "nixpacks",
+          "installCommand": "cd radar-backend && curl -sSL https://install.python-poetry.org | python3 -",
           "startCommand": "cd radar-backend && poetry run uvicorn main:app --host 0.0.0.0 --port 3001",
           "buildCommand": "./build_backend.sh",
           "cpu": 0.5,
@@ -28,6 +29,7 @@
           "name": "Frontend",
           "type": "static",
           "buildType": "nixpacks",
+          "installCommand": "cd radar-frontend && npm install",
           "buildCommand": "./build_frontend.sh",
           "outputDirectory": "radar-frontend/dist",
           "envVariables": {
