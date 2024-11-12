@@ -13,13 +13,14 @@
           "id": "api",
           "name": "API",
           "type": "web",
-          "buildType": "docker",
-          "dockerfilePath": "./radar-backend/Dockerfile",
+          "buildType": "nixpacks",
+          "startCommand": "poetry run uvicorn main:app --host 0.0.0.0 --port 3000",
+          "buildCommand": "./build_backend.sh",
           "cpu": 0.5,
           "memory": 1,
           "minInstances": 1,
           "maxInstances": 1,
-          "port": 3001,      
+          "port": 3000,      
           "healthCheckPath": "/api/health"          
         },
         {
@@ -27,7 +28,7 @@
           "name": "Frontend",
           "type": "static",
           "buildType": "nixpacks",
-          "buildCommand": "cd radar-frontend && npm install && npm run build",
+          "buildCommand": "./build_frontend.sh",
           "outputDirectory": "radar-frontend/dist",
           "envVariables": {
             "VITE_API_URL": "/api"
