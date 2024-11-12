@@ -15,7 +15,7 @@
           "type": "web",
           "buildType": "nixpacks",
           "basePath": ".",
-          "installCommand": "cd radar-backend && ls -la && poetry install --no-dev --no-interactive --no-ansi",
+          "installCommand": "git submodule update --init --recursive && cd radar-backend && ls -la && poetry install --no-dev --no-interactive --no-ansi",
           "startCommand": "cd radar-backend && poetry run uvicorn main:app --host 0.0.0.0 --port 3001",
           "buildCommand": "./build_backend.sh",
           "cpu": 0.5,
@@ -31,7 +31,7 @@
           "type": "static",
           "buildType": "nixpacks",
           "basePath": ".",
-          "installCommand": "ls -la && cd radar-frontend && ls -la && npm install",
+          "installCommand": "git submodule update --init --recursive && cd radar-frontend && ls -la && npm install",
           "buildCommand": "./build_frontend.sh",
           "outputDirectory": "radar-frontend/dist",
           "envVariables": {
