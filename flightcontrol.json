@@ -30,7 +30,8 @@
                 "value": "dbConnectionString"
               }
             }
-          }
+          },
+          "postBuildCommand": "cd radar-backend && poetry run alembic upgrade head"
         },
         {
           "id": "frontend",
