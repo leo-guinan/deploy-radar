@@ -14,7 +14,7 @@
           "name": "API",
           "type": "web",
           "buildType": "nixpacks",
-          "installCommand": "cd radar-backend && curl -sSL https://install.python-poetry.org | python3 -",
+          "installCommand": "cd radar-backend && poetry install --no-dev --no-interactive --no-ansi",
           "startCommand": "cd radar-backend && poetry run uvicorn main:app --host 0.0.0.0 --port 3001",
           "buildCommand": "./build_backend.sh",
           "cpu": 0.5,
