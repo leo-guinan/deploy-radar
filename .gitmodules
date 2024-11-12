@@ -1,0 +1,6 @@
+[submodule "radar-frontend"]
+	path = radar-frontend
+	url = git@github.com:leo-guinan/radar-frontend
+[submodule "radar-backend"]
+	path = radar-backend
+	url = git@github.com:leo-guinan/radar-backend

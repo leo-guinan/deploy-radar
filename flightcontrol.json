@@ -14,7 +14,7 @@
           "name": "API",
           "type": "web",
           "buildType": "docker",
-          "dockerfilePath": "./demo-server/Dockerfile",
+          "dockerfilePath": "./radar-backend/Dockerfile",
           "cpu": 0.5,
           "memory": 1,
           "minInstances": 1,
@@ -27,8 +27,8 @@
           "name": "Frontend",
           "type": "static",
           "buildType": "nixpacks",
-          "buildCommand": "cd project && npm install && npm run build",
-          "outputDirectory": "project/dist",
+          "buildCommand": "cd radar-frontend && npm install && npm run build",
+          "outputDirectory": "radar-frontend/dist",
           "envVariables": {
             "VITE_API_URL": "/api"
           }
