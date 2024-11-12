@@ -22,15 +22,7 @@
           "minInstances": 1,
           "maxInstances": 1,
           "port": 3001,      
-          "healthCheckPath": "/api/health",
-          "customDomains": [
-            {
-              "hostname": "your-api-domain.com",
-              "certificate": {
-                "type": "acm"
-              }
-            }
-          ]
+          "healthCheckPath": "/api/health"
         },
         {
           "id": "frontend",
