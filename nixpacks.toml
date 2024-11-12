@@ -1,4 +1,4 @@
 providers = ["...", "python", "node"]
 
 [phases.setup]
-nixPkgs = ['...', 'git', 'openssl', 'openssh', 'poetry', 'nodejs_22']
+nixPkgs = ['...', 'poetry']
