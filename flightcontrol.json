@@ -32,10 +32,7 @@
           "basePath": ".",
           "installCommand": "git submodule update --init --recursive && cd radar-frontend && npm install",
           "buildCommand": "cd radar-frontend && npm run build",
-          "outputDirectory": "radar-frontend/dist",
-          "envVariables": {
-            "VITE_API_URL": "/api"
-          }
+          "outputDirectory": "radar-frontend/dist"
         },
         {
           "id": "db",
