@@ -22,7 +22,15 @@
           "minInstances": 1,
           "maxInstances": 1,
           "port": 3001,      
-          "healthCheckPath": "/api/health"
+          "healthCheckPath": "/api/health",
+          "envVariables": {
+            "DATABASE_URL": {
+              "fromService": {
+                "id": "db",
+                "value": "dbConnectionString"
+              }
+            }
+          }
         },
         {
           "id": "frontend",
