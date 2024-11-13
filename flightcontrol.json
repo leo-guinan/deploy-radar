@@ -31,7 +31,7 @@
               }
             }
           },
-          "postBuildCommand": "cd radar-backend && poetry run alembic upgrade head"
+          "preDeployCommand": "cd radar-backend && poetry run alembic upgrade head"
         },
         {
           "id": "frontend",
